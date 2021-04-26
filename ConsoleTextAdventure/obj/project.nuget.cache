@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NqqtQSNwFiX89zGXDYSbRFrnRabRirgsAIOt21fG9vgp4aZhwIZMPjsHj6CW8FNvq6yW/Yr5ZkxamqhGgUh2jQ==",
+  "dgSpecHash": "XPP2KRVijckDQmhLwQdqFcz+kOT0RGDiC4fd/UmQ9toCwbXZoCsO0xQjkCshNDi2YC8lsr7mR/dlt6Nfm5Kp7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\ConsoleTextAdventure.csproj",
+  "projectFilePath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using ConsoleTextAdventure.ConsoleFeatures;
+using ConsoleTextAdventure.Objects;
 
 namespace ConsoleTextAdventure
 {
@@ -13,22 +14,8 @@ namespace ConsoleTextAdventure
 
         static void StartSequence()
         {
-            // Player.Name = Prompt.Input<string>("What is your name?", null,
-            //     new[] {Validators.Required(), Validators.MinLength(3), Validators.MaxLength(16)});
-            //
-            // bool start = Prompt.Confirm($"Welcome {Player.Name}. Are you ready to start your adventure?");
-            //
-            // if (start)
-            // {
-            //     StartGame();
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Goodbye then");
-            //     Thread.Sleep(1000);
-            // }
-
             Console.WriteLine(Prompt.Input("What is your name?"));
+            Prompt.Select("Hello", new[] {new Door(Door.Direction.North), new Door(Door.Direction.North)});
         }
 
         static void StartGame()
