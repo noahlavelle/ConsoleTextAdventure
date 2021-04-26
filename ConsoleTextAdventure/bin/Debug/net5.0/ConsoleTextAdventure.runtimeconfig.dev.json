@@ -1,10 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Noah\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Noah\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.1.0.54\\ToolboxNuGetPackages",
-      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+      "/home/codespace/.dotnet/store/|arch|/|tfm|",
+      "/var/nuget"
     ]
   }
 }

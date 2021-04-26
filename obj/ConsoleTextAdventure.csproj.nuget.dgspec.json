@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {}
+    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {}
   },
   "projects": {
-    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {
+    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
+        "projectUniqueName": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
         "projectName": "ConsoleTextAdventure",
-        "projectPath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
+        "projectPath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
         "packagesPath": "/var/nuget",
-        "outputPath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/obj/",
+        "outputPath": "/workspaces/ConsoleTextAdventure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/codespace/.nuget/NuGet/NuGet.Config"
