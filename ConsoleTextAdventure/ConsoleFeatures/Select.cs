@@ -5,41 +5,74 @@ namespace ConsoleTextAdventure.ConsoleFeatures
 {
     public class Select
     {
+        private static Select _instance;
+
+        private readonly Dictionary<ConsoleKey, Func<int, int>> _actions = new()
+        {
+            {ConsoleKey.UpArrow, selectedItem => selectedItem - 1},
+            {ConsoleKey.DownArrow, selectedItem => selectedItem + 1},
+            {
+                ConsoleKey.Enter, selectedItem =>
+                {
+                    _instance.ItemSelected();
+                    return selectedItem;
+                }
+            }
+        };
+
+        private readonly int _selectedItem;
+        private readonly dynamic _items;
+        private bool _itemSelected;
+
         public Select(string message, dynamic[] items)
         {
-            int optionsCount = items.Length;
-            int selectedItem = 0;
-            bool itemSelected = false;
+            _instance = this;
+            var optionsCount = items.Length;
+            _items = items;
 
-            while (!itemSelected) {
-                for (int i = 0; i < optionsCount; i++) {
-                    if (selectedItem == i) {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+            message += ":\n";
+            Console.CursorVisible = false;
+            DrawMulticoloredLine.Draw(new[]
+            {
+                new DrawMulticoloredLine.ColoredStringSection("? ", ColorScheme.PromptColor),
+                new DrawMulticoloredLine.ColoredStringSection(message, ColorScheme.DefaultColor)
+            });
+
+            while (!_itemSelected)
+            {
+                for (var i = 0; i < optionsCount; i++)
+                {
+                    if (_selectedItem == i)
+                    {
+                        Console.ForegroundColor = ColorScheme.SelectionColor;
                         Console.Write("> ");
-                    } else {
+                    }
+                    else
+                    {
                         Console.Write("  ");
                     }
 
                     Console.WriteLine(items[i].InteractText);
                     Console.ResetColor();
-                    
                 }
 
-                switch (Console.ReadKey(true).Key) {
-                    case ConsoleKey.UpArrow:
-                        selectedItem = Math.Max(0, selectedItem - 1);
-                        break;
-                    case ConsoleKey.DownArrow:
-                        selectedItem = Math.Min(optionsCount - 1, selectedItem + 1);
-                        break;
-                }
+                var keyPressed = Console.ReadKey(true).Key;
+                if (_actions.ContainsKey(keyPressed))
+                    _selectedItem = Math.Clamp(_actions[keyPressed](_selectedItem), 0, optionsCount - 1);
 
-                selectedItem %= optionsCount;
-
-                if (!itemSelected) {
-                    Console.CursorTop -= optionsCount;
-                }
+                if (!_itemSelected) Console.CursorTop -= optionsCount;
             }
+        }
+
+        private void ItemSelected()
+        {
+            _itemSelected = true;
+            Console.CursorVisible = true;
+
+            if (_items[_selectedItem].CheckCanInteract())
+                _items[_selectedItem].Interacted();
+            else
+                Console.WriteLine("Cannot Interact");
         }
     }
 }

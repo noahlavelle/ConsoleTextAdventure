@@ -6,13 +6,13 @@ namespace ConsoleTextAdventure.ConsoleFeatures
     {
         public static void Draw(ColoredStringSection[] coloredStringSections)
         {
-            foreach (ColoredStringSection coloredStringSection in coloredStringSections)
+            foreach (var coloredStringSection in coloredStringSections)
             {
                 Console.ForegroundColor = coloredStringSection.Color;
                 Console.Write(coloredStringSection.Text);
             }
         }
-        
+
         public readonly struct ColoredStringSection
         {
             public readonly string Text;

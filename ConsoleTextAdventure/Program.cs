@@ -1,27 +1,30 @@
 ﻿using System;
-using System.Threading;
 using ConsoleTextAdventure.ConsoleFeatures;
 using ConsoleTextAdventure.Objects;
+using ConsoleTextAdventure.Scenes;
 
 namespace ConsoleTextAdventure
 {
-    static class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        public static dynamic CurrentScene;
+
+        private static void Main(string[] args)
         {
+            Console.ForegroundColor = ColorScheme.DefaultColor;
             StartSequence();
         }
 
-        static void StartSequence()
+        private static void StartSequence()
         {
-            Console.WriteLine(Prompt.Input("What is your name?"));
-            Prompt.Select("Hello", new[] {new Door(Door.Direction.North), new Door(Door.Direction.North)});
+            Player.Name = Prompt.Input("What is your name?");
+            StartGame();
         }
 
-        static void StartGame()
+        private static void StartGame()
         {
             Console.Clear();
-            new Scene();
+            CurrentScene = new OpeningScene();
         }
     }
 }

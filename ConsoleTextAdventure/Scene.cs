@@ -1,23 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using ConsoleTextAdventure.ConsoleFeatures;
 using ConsoleTextAdventure.Objects;
 
 namespace ConsoleTextAdventure
 {
     public class Scene
     {
-        private readonly dynamic[] _objects = {new Door(Door.Direction.North), new Door(Door.Direction.North)};
+        public dynamic[] Objects;
 
-        public Scene()
+        protected void SceneLoaded()
         {
-            // List<string> names = new List<string>();
-            // foreach (dynamic sceneObject in _objects)
-            // {
-            //     names.Add(sceneObject.InteractText);
-            // }
-            //
-            // Console.WriteLine(names.IndexOf(cities));
+            Prompt.Select("You have entered a new room. What do you want to do?", Objects);
         }
     }
 }

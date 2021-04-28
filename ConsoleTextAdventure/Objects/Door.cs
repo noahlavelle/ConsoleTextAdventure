@@ -9,15 +9,12 @@ namespace ConsoleTextAdventure.Objects
             North,
             East,
             South,
-            West,
+            West
         }
-
-        public readonly Direction DoorDirection;
 
         public Door(Direction doorDirection)
         {
-            DoorDirection = doorDirection;
-            InteractText = $"Enter the door facing {DoorDirection}";
+            InteractText = $"Enter the door facing {doorDirection}";
         }
 
         public override void Interacted()

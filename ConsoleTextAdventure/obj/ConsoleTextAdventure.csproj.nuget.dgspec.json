@@ -1,25 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {}
+    "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\ConsoleTextAdventure.csproj": {}
   },
   "projects": {
-    "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj": {
+    "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\ConsoleTextAdventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
+        "projectUniqueName": "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\ConsoleTextAdventure.csproj",
         "projectName": "ConsoleTextAdventure",
-        "projectPath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/ConsoleTextAdventure.csproj",
-        "packagesPath": "/var/nuget",
-        "outputPath": "/workspaces/ConsoleTextAdventure/ConsoleTextAdventure/obj/",
+        "projectPath": "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\ConsoleTextAdventure.csproj",
+        "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Noah\\RiderProjects\\ConsoleTextAdventure\\ConsoleTextAdventure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.1.0.54\\ToolboxNuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        ],
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/dotnet/5.0.104/sdk/5.0.104/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
